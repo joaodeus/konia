@@ -1,0 +1,23 @@
+Format: 1.8
+Date: Mon, 27 May 2013 23:15:22 +0100
+Source: koniaqml
+Binary: koniaqml
+Architecture: armel
+Version: 0.0.1
+Distribution: unstable
+Urgency: low
+Maintainer: unknown <>
+Changed-By: unknown <>
+Description: 
+ koniaqml   - <insert up to 60 chars description>
+Changes: 
+ koniaqml (0.0.1) unstable; urgency=low
+ .
+   * Initial Release.
+Checksums-Sha1: 
+ be2146fa01b3d72891b8f9762da268fa1398ae5a 94244 koniaqml_0.0.1_armel.deb
+Checksums-Sha256: 
+ 5c5b813fa989e3b224acce39a5a66479f078f2e945da2eccc030908f2a6f336e 94244 koniaqml_0.0.1_armel.deb
+Files: 
+ df406c323bcc4d975e50a2fc8daec142 94244 user/other optional koniaqml_0.0.1_armel.deb
+Maemo-Display-Name: KoniaQML
