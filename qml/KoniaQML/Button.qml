@@ -19,7 +19,7 @@ Rectangle {
 
     signal buttonClick()
     onButtonClick: {
-        console.log("botao clickado")
+        //console.log("botao clickado")
     }
 
     MouseArea {
