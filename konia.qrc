@@ -23,5 +23,8 @@
         <file>images/jolla_phone_W_Blue.png</file>
         <file>images/jolla_phone_W_Green.png</file>
         <file>images/jolla_phone_W_Yellow.png</file>
+        <file>sound/s1.wav</file>
+        <file>images/level2_factory.png</file>
+        <file>images/treadmill.png</file>
     </qresource>
 </RCC>

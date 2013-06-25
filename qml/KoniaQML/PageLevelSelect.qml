@@ -15,6 +15,9 @@ Rectangle {
 
 
     signal level_1_clicked()
+    signal level_2_clicked()
+    signal level_3_clicked()
+    signal level_quit()
 
     Grid {
         id: grid
@@ -26,47 +29,31 @@ Rectangle {
         spacing: 20
 
 
-        property int w: 80
-        property int h: 80
+        ButtonLevel {
+            id: level1
+            textLevel: "Level 1"
+            onLevel_clicked: level_1_clicked()
+        }
 
+        ButtonLevel {
+            id: level2
+            textLevel: "Level 2"
+            onLevel_clicked: level_2_clicked()
+        }
 
+        ButtonLevel {
+            id: level3
+            textLevel: "Level 3"
+            onLevel_clicked: level_3_clicked()
+        }
 
-        Rectangle {
-            id: level_1
-            color: "white"
-            border.color: "red"
-            border.width: 2
-            opacity: 1
-            radius: 25
-            width: grid.w; height: grid.h
-
-
-            Text {
-                id: text_level_1
-                anchors.centerIn: level_1
-                //color: activePalette.buttonText
-                text: "Level 1"
-            }
-
-            MouseArea {
-                anchors.fill: level_1
-                onClicked: {
-                    console.log("level 1")
-                    level_1_clicked()
-                }
-
-            }
+        ButtonLevel {
+            id: level4
+            textLevel: "Back"
+            onLevel_clicked: level_quit()
         }
 
 
-        Rectangle { color: "green"; width: grid.w; height: grid.h }
-        Rectangle { color: "blue"; width: grid.w; height: grid.h }
-        Rectangle { color: "cyan"; width: grid.w; height: grid.h }
-        Rectangle { color: "magenta"; width: grid.w; height: grid.h }
-        Rectangle { color: "yellow"; width: grid.w; height: grid.h }
-
-
-
-     }
+    }
 
 }

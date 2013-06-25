@@ -15,9 +15,9 @@ Changes:
  .
    * Initial Release.
 Checksums-Sha1: 
- be2146fa01b3d72891b8f9762da268fa1398ae5a 94244 koniaqml_0.0.1_armel.deb
+ 5ba082d0ec991139f98e66cafe84e6f6f3b13e23 77390 koniaqml_0.0.1_armel.deb
 Checksums-Sha256: 
- 5c5b813fa989e3b224acce39a5a66479f078f2e945da2eccc030908f2a6f336e 94244 koniaqml_0.0.1_armel.deb
+ 5903140160e37675d146a36821057aa8c61588e2c749e4cc16b6590f8fe72884 77390 koniaqml_0.0.1_armel.deb
 Files: 
- df406c323bcc4d975e50a2fc8daec142 94244 user/other optional koniaqml_0.0.1_armel.deb
+ 1352afece00cfabeca770a53d717acdb 77390 user/other optional koniaqml_0.0.1_armel.deb
 Maemo-Display-Name: KoniaQML

@@ -10,9 +10,6 @@ Item {
     width: 360
     height: 420
 
-
-    //property string activeState: "levelSelectPage"
-
     states: [
         State {
             name: "menu"
@@ -27,11 +24,9 @@ Item {
             name: "game"
             PropertyChanges {
                 target: gamePage
-                opacity: 1
-                //numberPhones: 5
+                opacity: 1               
                 restoreEntryValues: true
             }
-
         },
 
         State {
@@ -39,7 +34,35 @@ Item {
             PropertyChanges {
                 target: levelSelectPage
                 opacity: 1
-                //numberPhones: 5
+                restoreEntryValues: true
+            }
+        },
+
+
+        State {
+            name: "state_level2"
+            PropertyChanges {
+                target: factoryLevel
+                opacity: 1
+                restoreEntryValues: true
+            }
+        },        
+
+        State {
+            name: "state_level3_sea"
+            PropertyChanges {
+                target: seaLevel
+                opacity: 1
+                restoreEntryValues: true
+            }
+        },
+
+
+        State {
+            name: "aboutState"
+            PropertyChanges {
+                target: about
+                opacity: 1
                 restoreEntryValues: true
             }
         }
@@ -58,6 +81,8 @@ Item {
         onLevelSelect: {
             root.state = "levelSelect"
         }
+
+        onAbout: root.state = "aboutState"
     }
 
 
@@ -71,7 +96,6 @@ Item {
         }
     }
 
-
     PageLevelSelect {
         id: levelSelectPage
         anchors.fill: parent
@@ -80,7 +104,28 @@ Item {
             root.state = "game"
             gamePage.start()
         }
-
+        onLevel_2_clicked: root.state = "state_level2"
+        onLevel_3_clicked: root.state = "state_level3_sea"
+        onLevel_quit: root.state = "menu"
     }
+
+    FactoryPhoneLevel {
+        id: factoryLevel
+        opacity: 0
+        onFactoryClicked: root.state = "levelSelect"
+    }
+
+    SeaLevel {
+        id: seaLevel
+        opacity: 0
+    }
+
+    PageAbout {
+        id: about
+        opacity: 0
+        onAboutClicked: root.state = "menu"
+    }
+
+
 
 }

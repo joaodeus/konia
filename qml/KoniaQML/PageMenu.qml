@@ -8,19 +8,51 @@ Rectangle {
 
 
 
+    //Sky
+    Rectangle {
+        id: sky
+        width: parent.width
+        height: parent.height / 2
+        anchors.top: parent.top
+        color: "aliceblue"
+    }
+
+    //ocean
+    Rectangle {
+        id: ocean
+        width: parent.width
+        height: parent.height / 2
+        anchors.bottom: parent.bottom
+        color: "lightblue"
+    }
+
+    //Sun
+    Image {
+        id: sun
+        width: 80
+        height: 80
+        source: "qrc:/images/images/sun.png"
+        anchors.top: parent.top
+        anchors.right: parent.right
+    }
+
     Boat {
-        id: boat
-        anchors.left: parent.left
-        anchors.verticalCenter: parent.verticalCenter
+        id: boat       
+        property real t;
+        x: parent.width / 2 + parent.width / 3 * Math.sin(t * Math.PI * 2) - width / 2;
+        y: parent.height / 2 + parent.height / 20 * Math.cos(t * Math.PI * 12) /*-height*/;
+        NumberAnimation on t { from: 0; to: 1; duration: 10000; loops: Animation.Infinite }
+
     }
 
 
     signal gameclick()
     signal levelSelect()
+    signal about()
 
     Row {
         id: columnbuttons
-        spacing: 20
+        spacing: 15
         height: parent.height / 2
       //  width: parent.width
         anchors.bottom: parent.bottom
@@ -31,19 +63,20 @@ Rectangle {
         anchors.bottomMargin: columnbuttons.spacing
 
         Button {
+            id:aboutBtn
+            text: "About"
+           // anchors.leftMargin: 12
+            anchors.bottom: parent.bottom
+            onButtonClick: about()
+        }
+
+        Button {
             id:startGameBtn
             text: "Start Game"
            // anchors.leftMargin: 12
             anchors.bottom: parent.bottom
             onButtonClick: gameclick()
         }
-
-        /*Button {
-            id:settingsGameBtn
-            text: "Levels"
-            anchors.bottom: parent.bottom
-            onButtonClick: levelSelect()
-        }*/
 
         Button {
             id: gameExit

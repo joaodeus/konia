@@ -1,6 +1,8 @@
 //PageGame.qml
 import QtQuick 1.1
 import Qt.labs.particles 1.0
+//import Qt.multimedia 1.0
+//import QtMultimediaKit 1.2
 
 Rectangle {
     id: game
@@ -9,11 +11,6 @@ Rectangle {
 
   //  color: "darkblue"
    // ColorAnimation {from: "white"; to: "black"; duration: 6000; running: true }
-
-
-
-
-
 
     // flying bird
     AnimatedImage {
