@@ -6,6 +6,7 @@ bld.inf
 *.changes
 *.mmp
 *.pkg
+*.loc
 
 debian/
 moc/

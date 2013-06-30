@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/images">
-        <file>images/jolla_scenario.png</file>
         <file>images/jolla_boat.png</file>
         <file>images/jolla_phone_M.png</file>
         <file>images/jolla_phone_W.png</file>
@@ -24,7 +23,6 @@
         <file>images/jolla_phone_W_Green.png</file>
         <file>images/jolla_phone_W_Yellow.png</file>
         <file>sound/s1.wav</file>
-        <file>images/level2_factory.png</file>
         <file>images/treadmill.png</file>
     </qresource>
 </RCC>
